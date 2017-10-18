@@ -14,6 +14,7 @@
 		04B4491B1F97935600B69338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04B449191F97935600B69338 /* LaunchScreen.storyboard */; };
 		04B449261F97935700B69338 /* Interactive_StoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B449251F97935700B69338 /* Interactive_StoryTests.swift */; };
 		04B449311F97935700B69338 /* Interactive_StoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B449301F97935700B69338 /* Interactive_StoryUITests.swift */; };
+		04B4493F1F979BBA00B69338 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4493E1F979BBA00B69338 /* Story.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		04B4492C1F97935700B69338 /* Interactive StoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Interactive StoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04B449301F97935700B69338 /* Interactive_StoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactive_StoryUITests.swift; sourceTree = "<group>"; };
 		04B449321F97935700B69338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B4493E1F979BBA00B69338 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				04B449101F97935600B69338 /* AppDelegate.swift */,
 				04B449121F97935600B69338 /* ViewController.swift */,
+				04B4493E1F979BBA00B69338 /* Story.swift */,
 				04B449141F97935600B69338 /* Main.storyboard */,
 				04B449171F97935600B69338 /* Assets.xcassets */,
 				04B449191F97935600B69338 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				04B449131F97935600B69338 /* ViewController.swift in Sources */,
 				04B449111F97935600B69338 /* AppDelegate.swift in Sources */,
+				04B4493F1F979BBA00B69338 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

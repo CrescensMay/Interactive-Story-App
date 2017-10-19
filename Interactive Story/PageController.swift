@@ -32,7 +32,14 @@ class PageController: UIViewController {
         
         if let page = page {
             artworkView.image = page.story.artwork
-            storyLabel.text = page.story.text
+            
+            let attributedString = NSMutableAttributedString(string: page.story.text)
+            
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 10
+            
+            attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
+            storyLabel.attributedText = attributedString
         }
     }
 

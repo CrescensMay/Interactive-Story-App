@@ -42,18 +42,20 @@ class PageController: UIViewController {
     
     // MARK: User Interface Properties
     
-    let artworkView: UIImageView = {
+    lazy var artworkView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = self.page?.story.artwork
         
         return imageView
     }()
     
-    let storyLabel: UILabel = {
+    lazy var storyLabel: UILabel = {
        let label = UILabel()
        label.translatesAutoresizingMaskIntoConstraints = false
        label.numberOfLines = 0
-        return label
+       label.attributedText = self.page?.story(attributed: true)
+       return label
     }()
     
     let firstChoiceButton: UIButton = {
@@ -82,9 +84,6 @@ class PageController: UIViewController {
         
         view.backgroundColor = .white
         if let page = page {
-            artworkView.image = page.story.artwork
-            
-            storyLabel.attributedText = page.story(attributed: true)
             
             if let firstChoice = page.firstChoice {
                 firstChoiceButton.setTitle(firstChoice.title, for: .normal)

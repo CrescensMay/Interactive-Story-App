@@ -8,6 +8,34 @@
 
 import UIKit
 
+extension NSAttributedString {
+    var stringRange: NSRange {
+        return NSMakeRange(0, self.length)
+    }
+}
+extension Story {
+    var attributedText: NSAttributedString {
+        
+        let attributedString = NSMutableAttributedString(string: text)
+        
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 10
+        
+        attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: attributedString.stringRange)
+        
+        return attributedString
+    }
+}
+
+extension Page {
+    func story(attributed: Bool) -> NSAttributedString {
+        if attributed {
+            return story.attributedText
+        }else {
+            return NSAttributedString(string: story.text)
+        }
+    }
+}
 class PageController: UIViewController {
 
     var page: Page?
@@ -56,13 +84,7 @@ class PageController: UIViewController {
         if let page = page {
             artworkView.image = page.story.artwork
             
-            let attributedString = NSMutableAttributedString(string: page.story.text)
-            
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = 10
-            
-            attributedString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
-            storyLabel.attributedText = attributedString
+            storyLabel.attributedText = page.story(attributed: true)
             
             if let firstChoice = page.firstChoice {
                 firstChoiceButton.setTitle(firstChoice.title, for: .normal)

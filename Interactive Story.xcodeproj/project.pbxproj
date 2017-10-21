@@ -17,6 +17,10 @@
 		04B4493F1F979BBA00B69338 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4493E1F979BBA00B69338 /* Story.swift */; };
 		04B449411F97A08A00B69338 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B449401F97A08A00B69338 /* Page.swift */; };
 		04B449431F98C03900B69338 /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B449421F98C03900B69338 /* PageController.swift */; };
+		04B449481F9B6AA400B69338 /* HappyEnding.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04B449451F9B6AA400B69338 /* HappyEnding.wav */; };
+		04B449491F9B6AA400B69338 /* Ominous.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04B449461F9B6AA400B69338 /* Ominous.wav */; };
+		04B4494A1F9B6AA400B69338 /* PageTurn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 04B449471F9B6AA400B69338 /* PageTurn.wav */; };
+		04B4494C1F9B6B3900B69338 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4494B1F9B6B3900B69338 /* Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		04B4493E1F979BBA00B69338 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		04B449401F97A08A00B69338 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		04B449421F98C03900B69338 /* PageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
+		04B449451F9B6AA400B69338 /* HappyEnding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HappyEnding.wav; sourceTree = "<group>"; };
+		04B449461F9B6AA400B69338 /* Ominous.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Ominous.wav; sourceTree = "<group>"; };
+		04B449471F9B6AA400B69338 /* PageTurn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = PageTurn.wav; sourceTree = "<group>"; };
+		04B4494B1F9B6B3900B69338 /* Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +116,9 @@
 				04B4493E1F979BBA00B69338 /* Story.swift */,
 				04B449401F97A08A00B69338 /* Page.swift */,
 				04B449421F98C03900B69338 /* PageController.swift */,
+				04B4494B1F9B6B3900B69338 /* Audio.swift */,
 				04B449141F97935600B69338 /* Main.storyboard */,
+				04B449441F9B666D00B69338 /* Resources */,
 				04B449171F97935600B69338 /* Assets.xcassets */,
 				04B449191F97935600B69338 /* LaunchScreen.storyboard */,
 				04B4491C1F97935600B69338 /* Info.plist */,
@@ -132,6 +142,16 @@
 				04B449321F97935700B69338 /* Info.plist */,
 			);
 			path = "Interactive StoryUITests";
+			sourceTree = "<group>";
+		};
+		04B449441F9B666D00B69338 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04B449451F9B6AA400B69338 /* HappyEnding.wav */,
+				04B449461F9B6AA400B69338 /* Ominous.wav */,
+				04B449471F9B6AA400B69338 /* PageTurn.wav */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,8 +264,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B449491F9B6AA400B69338 /* Ominous.wav in Resources */,
 				04B4491B1F97935600B69338 /* LaunchScreen.storyboard in Resources */,
 				04B449181F97935600B69338 /* Assets.xcassets in Resources */,
+				04B449481F9B6AA400B69338 /* HappyEnding.wav in Resources */,
+				04B4494A1F9B6AA400B69338 /* PageTurn.wav in Resources */,
 				04B449161F97935600B69338 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B4494C1F9B6B3900B69338 /* Audio.swift in Sources */,
 				04B449131F97935600B69338 /* ViewController.swift in Sources */,
 				04B449111F97935600B69338 /* AppDelegate.swift in Sources */,
 				04B449411F97A08A00B69338 /* Page.swift in Sources */,

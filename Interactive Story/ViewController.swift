@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +46,14 @@ class ViewController: UIViewController {
                 fatalError("\(error.localizedDescription)")
             }
         }
+    }
+    
+    func keyboardWillShow(_ notification: Notification){
+        print("Keyboard will show")
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 
 

@@ -24,7 +24,7 @@ class ViewController: UIViewController {
             guard let pageController = segue.destination as? PageController else {
                 return
             }
-            pageController.page = Adventure.story
+            pageController.page = Adventure.story(withName: "")
         }
     }
 

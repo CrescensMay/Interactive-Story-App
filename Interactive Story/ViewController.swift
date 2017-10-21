@@ -34,8 +34,14 @@ class ViewController: UIViewController {
                         pageController.page = Adventure.story(withName: name)
                     }
                 }
-            }catch let error {
+            }catch AdventureError.nameNotProvided {
                 
+                let alertController = UIAlertController(title: "Name not Provided", message: "Provide a name to start the story", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(action)
+                present(alertController, animated: true, completion: nil)
+            }catch let error {
+                fatalError("\(error.localizedDescription)")
             }
         }
     }

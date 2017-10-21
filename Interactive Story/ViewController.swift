@@ -55,7 +55,7 @@ class ViewController: UIViewController {
             let frame = keyboardFrame.cgRectValue
             textFieldBottomConstraint.constant = frame.size.height + 10
             
-            UIView.animate(withDuration: 0.9){
+            UIView.animate(withDuration: 0.8){
                 self.view.layoutIfNeeded()
             }
         }
@@ -64,7 +64,28 @@ class ViewController: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-
-
+    
 }
+
+extension ViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

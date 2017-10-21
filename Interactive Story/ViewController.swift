@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var textFieldBottomConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,7 +51,14 @@ class ViewController: UIViewController {
     }
     
     func keyboardWillShow(_ notification: Notification){
-        print("Keyboard will show")
+        if let info = notification.userInfo, let keyboardFrame = info[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let frame = keyboardFrame.cgRectValue
+            textFieldBottomConstraint.constant = frame.size.height + 10
+            
+            UIView.animate(withDuration: 0.9){
+                self.view.layoutIfNeeded()
+            }
+        }
     }
     
     deinit {
